@@ -1,0 +1,2 @@
+#define BARISTALABSESPRESSOLIBESPRESSO_API __declspec(dllexport)
+#define BARISTALABSESPRESSOLIBESPRESSO_API __declspec(dllimport)
