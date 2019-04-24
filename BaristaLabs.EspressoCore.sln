@@ -12,10 +12,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaristaLabs.EspressoCore.Co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3254F79B-E1F7-44E8-8464-C661DCD80BFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaristaLabs.EspressoCore.ConsoleTest", "src\BaristaLabs.EspressoCore.ConsoleTest\BaristaLabs.EspressoCore.ConsoleTest.csproj", "{9541699C-6178-48BF-A02A-56CB89A23B0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaristaLabs.EspressoCore.ConsoleTest", "src\BaristaLabs.EspressoCore.ConsoleTest\BaristaLabs.EspressoCore.ConsoleTest.csproj", "{9541699C-6178-48BF-A02A-56CB89A23B0F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{21FFB764-0347-49FC-A35D-8E0364EE7B4D} = {21FFB764-0347-49FC-A35D-8E0364EE7B4D}
 		{67E0B6CB-A6DD-4BED-BF02-945D32781742} = {67E0B6CB-A6DD-4BED-BF02-945D32781742}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E3D48C2D-C864-41F4-BA31-19B206AD14DC}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
