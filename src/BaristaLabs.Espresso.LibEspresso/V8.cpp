@@ -16,7 +16,7 @@
 /// This file contains a flat C API layer. This is the API exported by LibEspresso.dll.
 #include <v8.h>
 
-#include "EspressoCommon.h";
+#include "EspressoCommon.h"
 #include "libplatform/libplatform.h"
 
 std::unique_ptr<v8::Platform> platform = nullptr;

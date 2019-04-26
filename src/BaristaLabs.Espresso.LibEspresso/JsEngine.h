@@ -1,6 +1,6 @@
 #pragma once
 
-#include "EspressoCommon.h";
+#include "EspressoCommon.h"
 
 #include <v8.h>
 #include <libplatform/libplatform.h>
