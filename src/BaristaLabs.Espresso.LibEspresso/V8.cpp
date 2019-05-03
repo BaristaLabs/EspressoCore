@@ -19,18 +19,17 @@
 #include "EspressoCommon.h"
 #include "libplatform/libplatform.h"
 
-std::unique_ptr<v8::Platform> platform = nullptr;
+static std::unique_ptr<v8::Platform> s_platform = nullptr;
 
 ESPRESSO_API Initialize(const char* directory_path)
 {
-
 	// Initialize V8.
 	v8::V8::InitializeICUDefaultLocation(directory_path);
 	v8::V8::InitializeExternalStartupData(directory_path);
-	if (platform == nullptr) {
-		platform = v8::platform::NewDefaultPlatform(0);
+	if (s_platform == nullptr) {
+		s_platform = v8::platform::NewDefaultPlatform(0);
 	}
-	v8::V8::InitializePlatform(platform.get());
+	v8::V8::InitializePlatform(s_platform.get());
 	v8::V8::Initialize();
 
 	return JsNoError;
@@ -39,6 +38,7 @@ ESPRESSO_API Initialize(const char* directory_path)
 ESPRESSO_API Shutdown() {
 	v8::V8::Dispose();
 	v8::V8::ShutdownPlatform();
-	platform = nullptr;
+	s_platform.release();
+	s_platform = nullptr;
 	return JsNoError;
 }
